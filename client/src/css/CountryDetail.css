@@ -1,0 +1,33 @@
+.CountryDetail {
+    margin: 7vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CountryDetail img {
+    width: 12vw;
+    aspect-ratio: 3/2;
+}
+
+.CountrySpecs {
+    width: 20vw;
+    padding-top: 10px;
+    background-color: rgba(197, 185, 72, 0.699);
+    border-radius: 7%;
+    margin-bottom: 7vh;
+}
+
+
+
+.ActivitiesSpecs {
+    background-color: brown ;
+    border-radius: 5%;
+    max-width: 60%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, 17%);
+    /* align-content: center; */
+    justify-content: space-around;
+}

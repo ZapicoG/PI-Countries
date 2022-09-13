@@ -1,0 +1,19 @@
+img {
+    aspect-ratio: 3/2;
+    width: 7vw;
+
+}
+.tagClose {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 2vw;
+    height: 2vh;
+}
+
+.countryTag {
+    position: relative;
+    border-radius: 5%;
+    margin: 0.5vw;
+
+}
