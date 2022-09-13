@@ -1,5 +1,45 @@
+.popup-content {
+    background-color: #C49C3F;
+    width: 30vw;
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        width: 50%;
+    }
+}
+
+.CreateActivity {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .countryTags {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+
+.popup-content input, .popup-content select {
+    width: 95%;
+    margin: 0px, 1px, 0px, 1px;
+}
+
+.popup-content button {
+    background-color: #9CC452;
+}
+
+
+.AgregarPais {
+    margin-top: 2vh;
+    flex-direction: row;
+}
+
+
+.AgregarPais input {
+    width: 85%;
+    flex-direction: row;
 }

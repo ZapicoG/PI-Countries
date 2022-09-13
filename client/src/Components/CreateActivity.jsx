@@ -106,9 +106,11 @@ const CreateActivity = () => {
 
 
   return ( 
-        <Popup trigger={<button className="button"> Crear actividad </button>} modal nested >
+        <Popup trigger={<button className="button"> Crear actividad </button>} modal >
              {close => ( <div className="modal"> <button className="close" onClick={() =>{close(); resetForm()}}> X </button> 
-             <form onSubmit={submit} autoComplete="off">
+             <div class="CreateActivity">
+
+             <form  onSubmit={submit} autoComplete="off">
                 <label>Nombre: </label>
                 <input 
                 type="text" 
@@ -154,7 +156,7 @@ const CreateActivity = () => {
                 {errors.season && (<p className='danger'>{errors.season}</p>)}
 
             </form>
-            <div>
+            <div class="AgregarPais">
                 <label>Agregar paises: </label>
               
                 <input
@@ -173,9 +175,10 @@ const CreateActivity = () => {
             </div>
               
              
+            </div>
              <button className="button" onClick={() => {
-              // console.log(activities)
-              let err = validate(input)
+               // console.log(activities)
+               let err = validate(input)
               if (Object.keys(err).length) return alert("Corroborar los datos ingresados");
               let activity = checkActivities()
               if (activity) {
