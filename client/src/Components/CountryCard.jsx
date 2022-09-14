@@ -13,7 +13,7 @@ const CountryCard = (props) => {
     }
 
 
-    return (<div class="countryCard">
+    return (<div className="countryCard">
         <img src={props.imageUrl} alt={`${props.name} flag`}/>
         <div>
         <Link to={`${props.id}`} onClick={setC}>

@@ -4,11 +4,11 @@ import "../css/Landing.css"
 
 export default function LandingPage () {
     return (
-        <div class="parent">
-            <div class="child">
-            <h1 class="letra">Bienvenidos!</h1>
+        <div className="parent">
+            <div className="child">
+            <h1 className="letra">Bienvenidos!</h1>
             <Link to="/home">
-                <button class="letra">Ingresar</button>
+                <button className="letra">Ingresar</button>
             </Link>
             </div>
         </div>

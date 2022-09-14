@@ -36,7 +36,7 @@ const SearchBar = () => {
     }
 
     function handleChange (e) {
-        if (e.target.name == "page") {
+        if (e.target.name === "page") {
             filter = {...filter, [e.target.name]: e.target.value};
             dispatch(changeFilter(filter))
         } else {
@@ -92,7 +92,7 @@ const SearchBar = () => {
 
     
     return (
-        <div class="searchBar">
+        <div className="searchBar">
         <input
         type="text"
         name="name"
@@ -122,7 +122,7 @@ const SearchBar = () => {
         >
             <option value={""}>Actividades</option>
             {
-            activities.map( activity => <option value={activity.name}>{activity.name}</option>)
+            activities.map( activity => <option key={activity.name} value={activity.name}>{activity.name}</option>)
         }
         </select>
 
@@ -147,7 +147,7 @@ const SearchBar = () => {
         onChange={handleChange}
         value={filter.page ? filter.page : "0"}
         >
-            {maxPages.map(e => <option>{e}</option>)}
+            {maxPages.map((e, i) => <option key={`P${i}`}>{e}</option>)}
         </select>
 
 

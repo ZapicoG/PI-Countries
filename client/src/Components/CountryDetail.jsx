@@ -25,8 +25,8 @@ const CountryDetail = () => {
 
   
   return (
-    <section class="CountryDetail">
-      <div class="CountrySpecs">
+    <section className="CountryDetail">
+      <div className="CountrySpecs">
       <img src={country.flag} alt={`${country.name} flag`}/>
       <p>Nombre oficial: {country.name}</p>
       <p>Continente: {country.continent}</p>
@@ -36,7 +36,7 @@ const CountryDetail = () => {
       <p>Area: {country.area}Km²</p>
       <p>Poblacion: {country.population}</p>
       </div>
-      <div class="ActivitiesSpecs">
+      <div className="ActivitiesSpecs">
       {country.activities?.map( c => (<ActivityCard 
       name={c.name}
       difficulty={c.difficulty}

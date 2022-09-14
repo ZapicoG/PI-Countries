@@ -1,8 +1,9 @@
 import {React, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { addToActivity, createActivity } from "../Actions";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css"
+// import Popup from "reactjs-popup";
+// import "reactjs-popup/dist/index.css"
 import "../css/CreateActivity.css"
 import CountryTag from "./CountryTag";
 
@@ -25,7 +26,7 @@ export function validate(input) {
 };
 
 
-const CreateActivity = () => {
+const CreateActivity2 = () => {
   const stateCountries = useSelector(state => state.countries)
   const activities = useSelector(state => state.activities)
   const [input, setInput] = useState({
@@ -44,6 +45,7 @@ const CreateActivity = () => {
  }
   const dispatch = useDispatch();
 
+  const history = useHistory()
 
   const submit = () => {
       let temp = countries.map(c => c[0])
@@ -106,9 +108,9 @@ const CreateActivity = () => {
 
 
   return ( 
-        <Popup trigger={<button className="button"> Crear actividad </button>} modal >
-             {close => ( <div className="modal"> <button className="close" onClick={() =>{close(); resetForm()}}> X </button> 
-             <div class="CreateActivity">
+        <section>
+              
+             <div className="CreateActivity">
 
              <form  onSubmit={submit} autoComplete="off">
                 <label>Nombre: </label>
@@ -170,7 +172,7 @@ const CreateActivity = () => {
                 <button type="submit" onClick={addCountry}>+</button>
 
             </div>
-            <div class="countryTags">
+            <div className="countryTags">
             {countries.map(c => <CountryTag name={c[0]} imageUrl={c[1]} deleteCountry={deleteCountry}/>)}
             </div>
               
@@ -194,19 +196,20 @@ const CreateActivity = () => {
              <button className="button" onClick={() => { 
               let err = validate(input)
               if (Object.keys(err).length) return alert("Corroborar los datos ingresados");
-              close();
               let activity = checkActivities()
               if (activity) {
                 addSubmit(activity);
                 resetForm();
+                history.push("/home")
                 return;
               }
               submit();
-              resetForm()
-              }} > Agregar Actividad </button> 
+              resetForm();
+              history.push("/home")
+              }} > Agregar Actividad </button>
              
-             </div> )} 
-        </Popup>);
+              
+        </section>);
 };
 
-export default CreateActivity;
+export default CreateActivity2;

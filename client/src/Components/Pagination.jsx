@@ -6,7 +6,7 @@ const Pagination = (props) => {
     const filter = useSelector(state => state.filter)
 
     useEffect(() =>{
-        console.log("caca")
+        
     },[filter])
     return (
         <select>

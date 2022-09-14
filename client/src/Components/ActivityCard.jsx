@@ -9,7 +9,7 @@ const ActivityDetail = (props) => {
     for (let i = 1; i <= props.difficulty; i++)
     {difficulty+= "★"}
   return (
-      <div class="ActivityCard">
+      <div className="ActivityCard">
       <p>{props.name}</p>
       <p>Dificultad: {difficulty}</p>
       <p>Duracion: {props.length} h{props.length > 1 ? "s" : ""}</p>

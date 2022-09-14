@@ -4,7 +4,7 @@ import Nav from "./Components/NavBar"
 import Home from './Components/Home';
 import LandingPage from './Components/Landing';
 import CountryDetail from './Components/CountryDetail';
-import CreateActivity from './Components/CreateActivity';
+import CreateActivity2 from './Components/CreateActivity2';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
     <Switch>
       <Route exact path={"/"} component={LandingPage}/>
       <Route exact path={"/home"} component={Home} />
-      {/* <Route exact path={"/createActivity"} component={CreateActivity}/> */}
+      <Route exact path={"/createActivity"} component={CreateActivity2}/>
       <Route path={"/:country"} component={CountryDetail}/>
     </Switch>
       </div>

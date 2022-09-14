@@ -12,11 +12,11 @@ const Home = () => {
     let filtered = useSelector(state => state.filtered);
 
     return (
-        <div class="countriesContainer">
+        <div className="countriesContainer">
             <h1>Countries</h1> 
-        <div class="country">
-        {filtered.map(c =>
-        <CountryCard 
+        <div className="country">
+        {filtered.map((c,i) =>
+        <CountryCard key={`C${i}`}
             imageUrl={c.flag}
             name={c.name}
             continent={c.continent}
