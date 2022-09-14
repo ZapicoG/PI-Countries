@@ -14,7 +14,7 @@ const CountryDetail = () => {
   const dispatch = useDispatch();
   let country = useSelector((state) => state.country);
   const activities = useSelector(state => state.activities)
-  console.log(country)   
+  // console.log(country)   
 
   let path = useLocation();
   path = path.pathname;
@@ -37,7 +37,8 @@ const CountryDetail = () => {
       <p>Poblacion: {country.population}</p>
       </div>
       <div className="ActivitiesSpecs">
-      {country.activities?.map( c => (<ActivityCard 
+      {country.activities?.map( (c, i) => (<ActivityCard
+      key={`Act${i}`} 
       name={c.name}
       difficulty={c.difficulty}
       length={c.length}

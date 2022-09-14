@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
     let { name, difficulty, length, season, countries } = req.body;
-    console.log(req.body)
+    // console.log(req.body)
     try {   
         let activity = await Activity.create({name, difficulty, length, season});
         if (!countries) return res.send("Activity added")

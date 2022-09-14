@@ -4,9 +4,9 @@ import "../css/ActivityTag.css"
 
 const ActivityTag = (props) => {
 
-    return (<div className"ActivityTag">
+    return (<div className="ActivityTag">
         <img src={props.imageUrl} alt={`${props.name} flag`}/>
-        <button className"tagClose" onClick={() => {console.log(props.name);props.deleteActivity(props.name)}}>X</button>
+        <button className="tagClose" onClick={() => {props.deleteActivity(props.name)}}>X</button>
     </div>)
 }
 

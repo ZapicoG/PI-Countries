@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { addToActivity, createActivity } from "../Actions";
 // import Popup from "reactjs-popup";
 // import "reactjs-popup/dist/index.css"
-import "../css/CreateActivity.css"
+import "../css/CreateActivity2.css"
 import CountryTag from "./CountryTag";
 
 
@@ -55,7 +55,7 @@ const CreateActivity2 = () => {
   const addSubmit = (activity) => {
     let temp = countries.map(c => c[0])
     let toDispatch = {id: activity.id, countries: temp}
-    console.log(toDispatch)
+    // console.log(toDispatch)
     dispatch(addToActivity(toDispatch))
   }
 
@@ -108,9 +108,9 @@ const CreateActivity2 = () => {
 
 
   return ( 
-        <section>
+        <section className="CreateActivityContainer">
               
-             <div className="CreateActivity">
+             <div className="CreateActivity2">
 
              <form  onSubmit={submit} autoComplete="off">
                 <label>Nombre: </label>

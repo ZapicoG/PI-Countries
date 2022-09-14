@@ -1,0 +1,50 @@
+.CreateActivityContainer {
+    background-color: #C49C3F;
+    width: 30vw;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    font-size: large;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .CreateActivityContainer {
+        width: 50%;
+    }
+}
+
+.CreateActivity2 {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.countryTags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.CreateActivityContainer input, .CreateActivityContainer select {
+    width: 95%;
+    margin: 0px, 1px, 0px, 1px;
+}
+
+.CreateActivityContainer button {
+    background-color: #9CC452;
+}
+
+
+.AgregarPais {
+    margin-top: 2vh;
+    flex-direction: row;
+}
+
+
+.AgregarPais input {
+    width: 85%;
+    flex-direction: row;
+}

@@ -53,7 +53,7 @@ const CreateActivity = () => {
   const addSubmit = (activity) => {
     let temp = countries.map(c => c[0])
     let toDispatch = {id: activity.id, countries: temp}
-    console.log(toDispatch)
+    // console.log(toDispatch)
     dispatch(addToActivity(toDispatch))
   }
 
@@ -107,8 +107,8 @@ const CreateActivity = () => {
 
   return ( 
         <Popup trigger={<button className="button"> Crear actividad </button>} modal >
-             {close => ( <div className="modal"> <button className="close" onClick={() =>{close(); resetForm()}}> X </button> 
-             <div class="CreateActivity">
+             {close => ( <section className="modal"> <button className="close" onClick={() =>{close(); resetForm()}}> X </button> 
+             <div className="CreateActivity">
 
              <form  onSubmit={submit} autoComplete="off">
                 <label>Nombre: </label>
@@ -150,10 +150,10 @@ const CreateActivity = () => {
                 </select>
               
 
-                {errors.name && (<p className='danger'>{errors.name}</p>)}
-                {errors.difficulty && (<p className='danger'>{errors.difficulty}</p>)}
-                {errors.length && (<p className='danger'>{errors.length}</p>)}
-                {errors.season && (<p className='danger'>{errors.season}</p>)}
+                {errors.name && (<p>{errors.name}</p>)}
+                {errors.difficulty && (<p>{errors.difficulty}</p>)}
+                {errors.length && (<p>{errors.length}</p>)}
+                {errors.season && (<p>{errors.season}</p>)}
 
             </form>
             <div className="AgregarPais">
@@ -170,7 +170,7 @@ const CreateActivity = () => {
                 <button type="submit" onClick={addCountry}>+</button>
 
             </div>
-            <div class="countryTags">
+            <div className="countryTags">
             {countries.map(c => <CountryTag name={c[0]} imageUrl={c[1]} deleteCountry={deleteCountry}/>)}
             </div>
               
@@ -205,7 +205,7 @@ const CreateActivity = () => {
               resetForm()
               }} > Agregar Actividad </button> 
              
-             </div> )} 
+             </section> )} 
         </Popup>);
 };
 

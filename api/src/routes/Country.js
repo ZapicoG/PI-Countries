@@ -69,7 +69,7 @@ router.get("/:ID", async (req, res) => {
     country = await Country.findByPk(ID, {include: {model: Activity, through: { attributes: []}}});
     }
     if (country) return res.json(country)
-    console.log(country)
+    // console.log(country)
     res.status(404).send("La ID no existe en la base de datos")
 })
 

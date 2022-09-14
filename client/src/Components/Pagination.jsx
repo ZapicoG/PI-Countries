@@ -10,7 +10,7 @@ const Pagination = (props) => {
     },[filter])
     return (
         <select>
-            {console.log(1,props)}
+            {/* {console.log(1,props)} */}
             {props.maxPages.map(e => <option value={e}>{e}</option>)}
         </select>
     )
