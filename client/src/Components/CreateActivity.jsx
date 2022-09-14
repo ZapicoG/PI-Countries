@@ -171,7 +171,7 @@ const CreateActivity = () => {
 
             </div>
             <div className="countryTags">
-            {countries.map(c => <CountryTag name={c[0]} imageUrl={c[1]} deleteCountry={deleteCountry}/>)}
+            {countries.map((c, i) => <CountryTag key={`CT${i}`} name={c[0]} imageUrl={c[1]} deleteCountry={deleteCountry}/>)}
             </div>
               
              

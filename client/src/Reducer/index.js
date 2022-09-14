@@ -24,6 +24,8 @@ const rootReducer = (state = initialState, action) => {
             return {...state, activities: action.payload}
         case ACTIONS.CREATE_ACTIVITY:
             return {...state, activities: [...state.activities, action.payload]}
+        case ACTIONS.ADD_TO_ACTIVITY:
+            return {...state, activities: [...state.activities]}
         case ACTIONS.SET_COUNTRY:
             return {...state, country: action.payload}
         case ACTIONS.CHANGE_FILTER:

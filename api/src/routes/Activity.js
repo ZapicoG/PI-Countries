@@ -38,7 +38,8 @@ router.post("/addCountry", async (req, res) => {
             })
             await country.addActivity(activity)
         })
-        res.send("Paises agregados correctamente a la actividad")
+        console.log("Paises agregados correctamente a la actividad")
+        res.send()
     } catch (error) {
         res.status(400).send({error: error.message})
     }
