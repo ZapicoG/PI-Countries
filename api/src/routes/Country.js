@@ -44,8 +44,12 @@ const getCountriesApi = async () => {
 router.get("/", async (req, res) => {
     let { name } = req.query;
     let countries = await Country.findAll();
+
+
     if (countries == 0) countries = await Country.bulkCreate(await getCountriesApi())
     countries = await Country.findAll({include: {model: Activity, through: { attributes: []}}});
+
+
     if (!name) return res.json(countries);
     let country = await Country.findAll({
         include: {

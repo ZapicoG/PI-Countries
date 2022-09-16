@@ -18,6 +18,7 @@ const SearchBar = () => {
 
     const blankFilter = {
         name: "",
+        poblacionMayor: "",
         continent: "",
         activity: "",
         order: "",
@@ -54,6 +55,7 @@ const SearchBar = () => {
             c.name.toLowerCase().includes(filter.name.toLowerCase())
             && (continent ? c.continent === continent : true)
             && (activity ? c.activities.some(e => e.name === activity) : true)
+            && (c.population > filter.poblacionMayor ? true : false)
         );
         let order = filter.order;
         filtered.sort((a, b) => {
@@ -139,6 +141,18 @@ const SearchBar = () => {
             <optgroup label="Poblacion">
             <option value="PopulationASC">Ascendente</option>
             <option value="PopulationDES">Descendente</option>
+            </optgroup>
+        </select>
+
+
+        <select 
+        name="poblacionMayor"
+        onChange={handleChange}
+        value={filter.poblacionMayor? filter.poblacionMayor : ""}
+        >
+            <optgroup label="Alfabeto">
+            <option value="">Todos</option>
+            <option value="50000000">50000000</option>
             </optgroup>
         </select>
 

@@ -7,6 +7,7 @@ const initialState = {
     activities: [],
     filter: {
         name: "",
+        poblacionMayor: "",
         continent: "",
         activity: "",
         order: "",
